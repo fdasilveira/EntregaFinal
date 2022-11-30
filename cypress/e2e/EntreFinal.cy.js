@@ -68,7 +68,6 @@ describe('Entrega Final', () =>
         let suma = (productsshop.productOne.Price1) + (productsshop.productTwo.Price2);
         let completename = (checkout.Profile.Name)+(checkout.Profile.Lastname)
         
-        
         home.clickButtonOnLineShop();
         productsPage.selectProduct(productsshop.productOne.Name);
         productsPage.clickOnClosemodal();
