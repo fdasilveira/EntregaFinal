@@ -11,7 +11,7 @@ describe('Entrega Final', () =>
     let productsshop;
     let checkout;
     
-    const user = "frandasilveira";
+    const user = "franciscodasilveira";
 
     const home = new Home();
     const productsPage = new ProductsPage();
