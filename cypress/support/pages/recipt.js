@@ -12,10 +12,8 @@ verifythankYouButton(){
 verifyLoading(){
     return cy.get(this.loading);
 }
-verifyCompleteName(name,lastName){
-    cy.get(this.completeName).invoke('text').then(() => {
-        cy.contains(name + " " + lastName)
-    });
+verifyCompleteName(){
+    return cy.get(this.completeName);
 }
 verifyCardNumber(){
     return cy.get(this.cardNumber);
