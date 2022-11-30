@@ -66,8 +66,8 @@ describe('Entrega Final', () =>
     it('entrega Final', () => {
 
         let suma = (productsshop.productOne.Price1) + (productsshop.productTwo.Price2);
-        let priceOne = productsshop.productOne.Price1
-        let priceTwo = productsshop.productTwo.Price2
+        //let priceOne = productsshop.productOne.Price1
+        //let priceTwo = productsshop.productTwo.Price2
         let completename = (checkout.Profile.Name)+(checkout.Profile.Lastname)
         
         
@@ -78,9 +78,9 @@ describe('Entrega Final', () =>
         productsPage.clickOnClosemodal();
         productsPage.clickButtonGoShoppingCart();
         reciptPage.verifyProduct(productsshop.productOne.Name).should("have.text", productsshop.productOne.Name);
-        shopingCartPage.verifyPricesAndProducts(productsshop.productOne.Name,productsshop.productOne.Price1).should("have.text",`$${priceOne}`);
+        shopingCartPage.verifyPricesAndProducts(productsshop.productOne.Name,productsshop.productOne.Price1).should("have.text",`$${productsshop.productOne.Price1}`);
         reciptPage.verifyProduct(productsshop.productTwo.Name).should("have.text", productsshop.productTwo.Name);
-        shopingCartPage.verifyPricesAndProducts(productsshop.productTwo.Name,productsshop.productTwo.Price2).should("have.text",`$${priceTwo}`);
+        shopingCartPage.verifyPricesAndProducts(productsshop.productTwo.Name,productsshop.productTwo.Price2).should("have.text",`$${productsshop.productTwo.Price2}`);
         shopingCartPage.clickOnShowTotalPrice()
         shopingCartPage.checkAcumulatePrice().should('have.text',suma);
         shopingCartPage.clickOngoToCheckOut()
