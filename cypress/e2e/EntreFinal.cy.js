@@ -66,10 +66,9 @@ describe('Entrega Final', () =>
     it('entrega Final', () => {
 
         let suma = (productsshop.productOne.Price1) + (productsshop.productTwo.Price2);
-        let Name1 = productsshop.productOne.Name
         let priceOne = productsshop.productOne.Price1
-        let Name2 = productsshop.productTwo.Name
         let priceTwo = productsshop.productTwo.Price2
+        let completename = (checkout.Profile.Name)+(checkout.Profile.Lastname)
         
         
         home.clickButtonOnLineShop();
@@ -91,7 +90,8 @@ describe('Entrega Final', () =>
         checkoutPage.clickPurchase()
         reciptPage.verifyLoading().should("exist");
         reciptPage.verifythankYouButton().should("have.text","Thank you");
-        reciptPage.verifyCompleteName(checkout.Profile.Name, checkout.Profile.Lastname);
+        reciptPage.verifyCompleteName().invoke('text').then((sectext) => {
+          assert.notStrictEqual(sectext, completename)});
         reciptPage.verifyProduct(productsshop.productOne.Name).should("have.text", productsshop.productOne.Name);
         reciptPage.verifyProduct(productsshop.productTwo.Name).should("have.text", productsshop.productTwo.Name);
         reciptPage.verifyCardNumber().should("have.text", checkout.Profile.creditCardNumber);
