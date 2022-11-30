@@ -66,8 +66,6 @@ describe('Entrega Final', () =>
     it('entrega Final', () => {
 
         let suma = (productsshop.productOne.Price1) + (productsshop.productTwo.Price2);
-        //let priceOne = productsshop.productOne.Price1
-        //let priceTwo = productsshop.productTwo.Price2
         let completename = (checkout.Profile.Name)+(checkout.Profile.Lastname)
         
         
