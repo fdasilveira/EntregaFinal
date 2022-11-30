@@ -10,8 +10,8 @@ describe('Entrega Final', () =>
     
     let productsshop;
     let checkout;
-    const numero = Math.floor(Math.random() * 1000);
-    const user = `frandasilveira${numero}`;
+    
+    const user = "frandasilveira";
 
     const home = new Home();
     const productsPage = new ProductsPage();
